@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
     },
     cartCount: {
         position: 'absolute',
-        bottom: 16,
+        bottom: 14,
+        left: 10,
         width: 16,
         height: 16,
         borderRadius: 8,
@@ -31,6 +32,12 @@ const styles = StyleSheet.create({
         backgroundColor: "green",
         justifyContent: 'center',
         zIndex: 999
+    },
+    cartNumber: {
+        fontFamily: "regular",
+        fontSize: 10,
+        fontWeight: 600,
+        color: COLORS.lightWhite
     }
 })
 

@@ -24,12 +24,16 @@ const Welcome = () => {
             <Feather name='search' size={24} style={styles.searchIcon} />
         </TouchableOpacity>
         <View style={styles.searchWrapper}>
-            <TextInput
+          <TouchableOpacity
+          style={{marginTop: 12}}
+          onPressIn={() => navigation.navigate("Search")}>
+          <TextInput
             style={styles.searchInput}
             value=''
-            onPressIn={() => navigation.navigate("Search")}
+            
             placeholder='What are you looking for'
             />
+          </TouchableOpacity>
         </View>
     <View>
         <TouchableOpacity style={styles.searchBtn}>

@@ -2,7 +2,7 @@ import {  Image, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import styles from './productDetails.style'
 import { useNavigation } from '@react-navigation/native'
-import { Ionicons, SimpleLineIcons } from '@expo/vector-icons'
+import { Fontisto, Ionicons, MaterialCommunityIcons, SimpleLineIcons } from '@expo/vector-icons'
 import { COLORS, SIZES, images } from '../constants'
 
 
@@ -80,9 +80,28 @@ export default function ProductDetails() {
         
         <View style={{marginBottom: SIZES.small}}>
           <View style={styles.location}>
-            <Ionicons name='location-outline' size={20} />
+           <View style={{flexDirection: "row"}}>
+           <Ionicons name='location-outline' size={20} />
+            <Text>   Dallas</Text>
+           </View>
+
+           <View style={{flexDirection: "row"}}>
+           <MaterialCommunityIcons name='truck-delivery-outline' size={20} />
+            <Text>   Free Delivery  </Text>
+           </View>
           </View>
         </View>
+
+        <View style={styles.cartRow}>
+          <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
+            <Text style={styles.cartTitle}>BUY NOW</Text>
+          </TouchableOpacity>
+          
+          <TouchableOpacity style={styles.addToCart}>
+            <Fontisto name='shopping-bag' size={22} color={COLORS.lightWhite}/>
+          </TouchableOpacity>
+        </View>
+
       </View>
     </View>
   )
